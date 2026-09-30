@@ -1,0 +1,27 @@
+{
+  "name": "smartsd",
+  "version": "1.0.0",
+  "description": "스마트설비 — 소규모 배관 설비 업체용 현장·정산 통합 관리 웹앱 (문의 접수부터 완료 정산까지, 누락·충돌 자동 탐지)",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node src/server/index.js",
+    "dev": "DATA_FILE=:memory: node --watch src/server/index.js",
+    "demo": "DATA_FILE=:memory: SMARTSD_NOW=2026-09-29T10:30 node src/server/index.js",
+    "test": "node --test \"tests/unit/*.test.js\" \"tests/api/*.test.js\"",
+    "test:unit": "node --test \"tests/unit/*.test.js\"",
+    "test:api": "node --test \"tests/api/*.test.js\"",
+    "test:coverage": "node --test --experimental-test-coverage --test-coverage-include='src/**' \"tests/unit/*.test.js\" \"tests/api/*.test.js\"",
+    "test:e2e": "playwright test",
+    "test:all": "npm test && npm run test:e2e",
+    "screenshots": "node scripts/screenshots.mjs",
+    "build:standalone": "node scripts/build-standalone.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.56.1",
+    "esbuild": "^0.25.12"
+  }
+}
