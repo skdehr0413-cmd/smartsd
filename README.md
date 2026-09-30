@@ -13,6 +13,14 @@
 
 ![오늘 화면](docs/screenshots/pc-01-오늘-대시보드.png)
 
+## 공개 사이트
+
+- 제출 페이지 (사업 기획서 · 화면 · 테스트 결과): **https://skdehr0413-cmd.github.io/smartsd/**
+- 실제 작동 데모 (PC·휴대폰, 설치 없음): **https://skdehr0413-cmd.github.io/smartsd/demo/smartsd-demo.html**
+
+GitHub Pages가 이 저장소의 `docs/` 폴더를 게시합니다(설정 → Pages → Deploy from a branch → `/docs`).
+사이트는 `npm run build:site` 로 다시 만듭니다.
+
 ## 제출물
 
 | 제출물 | 위치 |
